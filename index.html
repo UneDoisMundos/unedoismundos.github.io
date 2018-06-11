@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html>
+<title>Olimp&iacute;adas da Economia</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+    height: 100%;
+    color: #777;
+    line-height: 1.8;
+}
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+    background-image: url("https://i.imgur.com/9FeFq3Z.png");
+    min-height: 100%;
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+    background-image: url("https://i.imgur.com/0WOTYRn.jpg");
+    min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+    background-image: url("https://scontent.flis2-1.fna.fbcdn.net/v/t31.0-8/18156745_1255573374627135_6179610757358818488_o.jpg?_nc_cat=0&oh=cb11618a8f0f8e980fa8d7ea977909d7&oe=5B81E022");
+    min-height: 400px;
+}
+
+/* Fourth image (Contact) */
+.bgimg-4 {
+    background-image: url("https://scontent.flis2-1.fna.fbcdn.net/v/t31.0-8/23331259_1694396840591398_6564310954434871382_o.jpg?_nc_cat=0&oh=126c72507808cd05a6ac372bd5c75cd1&oe=5BC2390F");
+    min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+        background-attachment: scroll;
+    }
+}
+
+.accordion {
+    background-color: white;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.active, .accordion:hover {
+    background-color: #ccc;
+}
+
+.panel {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.accordion:after {
+    content: '\002B';
+    color: black;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2212";
+}
+
+.accordion1 {
+    background-color: white;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.active1, .accordion1:hover {
+    background-color: #ccc;
+}
+
+.panel1 {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.accordion1:after {
+    color: black;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.active1:after {
+}
+
+.column {
+    float: left;
+    width: 50%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.custom-pad-64x16 {
+   padding: 64px 64px 16px 64px;
+}
+
+.custom-pad-16x64 {
+   padding: 16px 64px 64px 64px;
+}
+
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-red w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a style="color: #e81d25" href="#contact" class="w3-bar-item w3-button w3-hide-small w3-right"><i class="fa fa-envelope"></i><strong> CONTACTOS</strong></a>
+    <a style="color: #e81d25" href="#documents" class="w3-bar-item w3-button w3-hide-small w3-right"><i class="fa fa-file-text-o"></i><strong> INFORMA&Ccedil;&Otilde;ES</strong></a>
+    <a style="color: #e81d25" href="#portfolio" class="w3-bar-item w3-button w3-hide-small w3-right"><i class="fa fa-th"></i><strong> NOT&Iacute;CIAS</strong></a>
+    <a style="color: #e81d25" href="#about" class="w3-bar-item w3-button w3-hide-small w3-right"><i class="fa fa-user"></i><strong> SOBRE N&Oacute;S</strong></a>
+    <a style="color: #e81d25" href="#home" class="w3-bar-item w3-button w3-right"><strong> IN&Iacute;CIO</strong></a>
+    </a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">SOBRE N&Oacute;S</a>
+    <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">NOT&Iacute;CIAS</a>
+    <a href="#documents" class="w3-bar-item w3-button"onclick="toggleFunction()">INFORMA&Ccedil;&Otilde;ES</a>
+    <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACTOS</a>
+  </div>
+</div>
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+</div>
+
+<!-- Container (About Section) -->
+<div style="text-align: justify;" class="w3-content w3-container w3-padding-64" id="about">
+  <h3 class="w3-center"><em>SOBRE N&Oacute;S</em></h3>
+  <h6>As&nbsp;<strong>Olimp&iacute;adas da Economia</strong>&nbsp;s&atilde;o uma iniciativa de car&aacute;ter social implementada nas escolas secund&aacute;rias de Portugal, tendo sido iniciada em 2013/2014, pelo projeto&nbsp;<strong>Une dois Mundos</strong>.</h6>
+  <div class="w3-row">
+    <div class="w3-col m6 w3-center w3-padding-large">
+      <img src="https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/14907226_601145806736565_976273502498976184_n.jpg?_nc_cat=0&oh=27a3b5eb0cc553b30ab0abe77d3c6f45&oe=5BC08D30" class="w3-round w3-image" alt="Olimp&iacute;adas da Economia" height="">
+    </div>
+
+    <!-- Hide this text on small devices -->
+    <div class="w3-col m6 w3-hide-small w3-padding-large">
+      <h6>O projeto, inicialmente composto por um grupo de estudantes da Licenciatura em Economia da&nbsp;<strong>FEUC</strong>, foi crescendo, reunindo hoje alunos dos de diferentes cursos e graus de ensino da&nbsp;<strong>Universidade de Coimbra</strong>, pautando-se por ser um dos projetos mais din&acirc;micos desta secular institui&ccedil;&atilde;o de ensino.</h6>
+	  <h6>Com o objetivo de promover o gosto pela ci&ecirc;ncia econ&oacute;mica nos mais novos, as&nbsp;<strong>OE</strong>&nbsp;prop&otilde;em-se a despertar nos jovens um apurado sentido cr&iacute;tico pela atualidade econ&oacute;mica.</h6>
+	  <h6>Propomo-nos, ainda, a unir o ensino secund&aacute;rio e o ensino superior, aproximando os estudantes portugueses daquela que &eacute; a mais antiga e reputada universidade de Portugal e da Lusofonia: a&nbsp;<strong>Universidade de Coimbra</strong>.</h6>
+    </div>
+  </div>
+</div>
+
+<div class="w3-row w3-center w3-red w3-padding-8">
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">4000+</span><br>
+    Participantes
+  </div>
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">135</span><br>
+    Escolas
+  </div>
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">89</span><br>
+    Munic&iacute;pios
+  </div>
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">16</span><br>
+    Distritos
+  </div>
+</div>
+
+<!-- Second Parallax Image with Portfolio Text -->
+<div class="bgimg-2 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-white w3-wide">NOT&Iacute;CIAS</span>
+  </div>
+</div>
+
+<!-- Container (Portfolio Section) -->
+<div class="w3-content w3-container w3-padding-64" id="portfolio">
+  <h3 class="w3-center"><em>AS NOSSAS NOVIDADES</em></h3>
+
+  <div class="w3-row-padding w3-center">
+
+   <!-- Blog entries -->
+   <div class="w3-col" style="text-align: justify;">
+  
+    <!-- Blog entry -->
+     <div class="w3-card-4 w3-margin w3-white">
+      <img src="https://scontent-dfw5-1.xx.fbcdn.net/v/t1.0-9/30724209_1420402821477522_6972862019028385792_n.png?_nc_cat=0&oh=8fa0e8f33ade3ac99084da92331bae7e&oe=5B800CFF" alt="Tema OE VI" style="width:100%">
+
+      <button class="accordion1 w3-container">
+       <h3><b>Economia da Felicidade pr&oacute;ximo tema das Olimp&iacute;adas da Economia</b></h3>
+       <h5>Tema da Edi&ccedil;&atilde;o VI, <span class="w3-opacity">17 de Abril, 2018</span></h5>
+      </button>
+      <div class="panel1 w3-container">
+       <p>Para celebrar a VI edi&ccedil;&atilde;o da maior atividade de forma&ccedil;&atilde;o econ&oacute;mica criada e gerida apenas por jovens universit&aacute;rios em Portugal teremos como tema a Economia da Felicidade.</p>
+       <p>O tema foi escolhido pelos finalistas das V Olimp&iacute;adas da Economia.</p>
+      </div>
+     </div>
+    <hr>
+
+   <!-- Blog entry -->
+    <div class="w3-card-4 w3-margin w3-white">
+     <img src="https://i.imgur.com/GgUqQAF.png" alt="OE V" style="width:100%">
+     <button class="accordion1 w3-container">
+      <h3><b>Jo&atilde;o Carvalho conquista V Olimp&iacute;adas da Economia</b></h3>
+      <h5>Jo&atilde;o Pedro Carvalho, Maria Ana Morais, Catarina Peixoto e Ana Moreira s&atilde;o os Premiados desta V Edi&ccedil;&atilde;o, <span class="w3-opacity">15 de Abril, 2018</span></h5>
+     </button>
+
+     <div class="panel1 w3-container">
+      <p>Jo&atilde;o Pedro Naz&aacute;rio Carvalho, estudante da Escola Secund&aacute;ria de Alcanena, conquistou as V Olimp&iacute;adas da Economia. O jovem de 17 anos destacou-se dos demais participantes no Quiz Ol&iacute;mpico assim como nos dois desafios.</p>
+      <p>No momento da entrega dos pr&eacute;mios, Jo&atilde;o Carvalho aproveitou para agradecer aos pais e restante fam&iacute;lia bem como a todos os colegas que teve oportunidade de conhecer no fim-de-semana.</p>
+      <p>A Vice-campe&atilde; Ol&iacute;mpica foi Maria Ana Morais, aluna do Agrupamento de Escolas Amato Lusitano (Castelo Branco). Foram ainda distinguidas com duas Men&ccedil;&otilde;es Honrosas as alunas Catarina Peixoto, da Escola Secund&aacute;ria de Santa Maria Maior (Viana do Castelo) e Ana Moreira, do Agrupamento de Escolas Padr&atilde;o da L&eacute;gua (Matosinhos).</p>
+      <p>Jo&atilde;o Pedro Santos, Coordenador Geral das Olimp&iacute;adas da Economia, aproveitou para agradecer &agrave; equipa que o acompanhou na organiza&ccedil;&atilde;o do projeto, &ldquo;alguns h&aacute; 5 anos&rdquo;, afirmando que &ldquo;naquela que &eacute; a Universidade mais antiga do pa&iacute;s, houve um conjunto de estudantes que deixou uma marca que jamais algu&eacute;m conseguir&aacute; apagar&rdquo;. Deixou ainda o apelo para que as entidades que apoiam o projeto reforcem o seu apoio, afirmando que a iniciativa &eacute; &uacute;nica a n&iacute;vel global na sua particularidade de ser organizada por estudantes, acreditando que se tal acontecer &ldquo;daqui a 10 anos ser&aacute; poss&iacute;vel ter uma iniciativa bem melhor&rdquo;.</p>
+      <p>No final da sess&atilde;o, Teresa Pedroso de Lima, Diretora da Faculdade de Economia, afirmou que os estudantes da faculdade se caraterizam por &ldquo;desassossegar a estrutura da faculdade&rdquo;, reafirmando que mais que dizer bem, os estudantes da Comiss&atilde;o Organizadora &ldquo;fazem bem pela Faculdade de Economia&rdquo;. A encerrar, aproveitou para agradecer ao Coordenador Geral das Olimp&iacute;adas da Economia, Jo&atilde;o Pedro Santos, bem como &agrave; equipa que o acompanha.</p>
+     </div>
+    </div>
+    <!-- END BLOG ENTRIES -->
+
+   </div>
+  </div>
+</div>
+
+<!-- Third Parallax Image with Documents Text -->
+<div class="bgimg-3 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-white w3-wide">INFORMA&Ccedil;&Otilde;ES</span>
+  </div>
+</div>
+
+<!-- Container (Document Section) -->
+<div class="w3-content w3-container custom-pad-64x16" id="documents">
+  <h3 class="w3-center"><em>INFORMA&Ccedil;&Atilde;O ACERCA DAS OLIMP&Iacute;ADAS DA ECONOMIA</em></h3>
+   <div class="w3-row-padding w3-justify">
+    <ul class="w3-ul w3-hoverable w3-white">
+
+     <button class="accordion w3-padding-16">
+      <span class="w3-large"><b>Formul&aacute;rio de Inscri&ccedil;&atilde;o</b></span>
+     </button>
+     <div class="panel">
+      <p>As inscri&ccedil;&otilde;es para a primeira fase VI Edi&ccedil;&atilde;o das Olimp&iacute;adas da Economia estar&atilde;o abertas apartir de dia 2 de Novembro de 2018 at&eacute; 6 de Janeiro de 2019 e podem ser realizadas no seguinte <a target="_blank" href="https://goo.gl/forms/JKolsFAkpK5Z2ZHA2"><b>Formul&aacute;rio</b></a>.</p>
+     </div>
+
+     <button class="accordion w3-padding-16">
+      <span class="w3-large"><b>Regulamento</b></span>
+     </button>
+     <div class="panel">
+      <p>De modo a garantir a integridade das Olimp&iacute;adas da Economia e garantir uma atividade com o m&iacute;nimo de precal&ccedil;os, apresentamos o <a target="_blank" href="https://www.uc.pt/feuc/olimpiadaseconomia/imagens-docs/Regulamento-OE-V.pdf"><b>Regulamento</b></a> que se encontra em vigor para a presente Edi&ccedil;&atilde;o.</p>
+     </div>
+
+     <button class="accordion w3-padding-16">
+      <span class="w3-large"><b>Provas-Tipo</b></span>
+     </button>
+     <div class="panel">
+      <p>Com o objetivo de providenciar um certo grau de prepara&ccedil;&atilde;o aos estudantes que v&atilde;o participar nas Olimp&iacute;adas da Economia, apresentamos ficheiros .zip com as Provas de edi&ccedil;&otilde;es anteriores:</p>
+      <p>&bull; <a href="https://www.uc.pt/feuc/olimpiadaseconomia/imagens-docs/OE_I.zip" title="Provas-Tipo OE I.zip" target="_self">OE I</a></p>
+      <p>&bull; <a href="https://www.uc.pt/feuc/olimpiadaseconomia/imagens-docs/OE_II.zip" title="Provas-Tipo OE II.zip" target="_self">OE II</a></p>
+      <p>&bull; <a href="https://www.uc.pt/feuc/olimpiadaseconomia/imagens-docs/OE_III.zip" title="Provas-Tipo OE III.zip" target="_self">OE III</a></p>
+      <p>&bull; <a href="https://www.uc.pt/feuc/olimpiadaseconomia/imagens-docs/OE_IV.zip" title="Provas-Tipo OE IV.zip" target="_self">OE IV</a></p>
+     </div>
+
+     <button class="accordion w3-padding-16">
+      <span class="w3-large"><b>Calend&aacute;rio</b></span>
+     </button>
+     <div class="panel">
+      <p>A calendariza&ccedil;&atilde;o das VI Olimp&iacute;adas da Economia estar&aacute; planeada para as seguintes datas:</p>
+      <p>&bull; 2 de Novembro a 6 Janeiro &ndash; Inscri&ccedil;&otilde;es na Primeira Fase</p>
+      <p>&bull; 9 de Janeiro &ndash; Primeira Fase</p>
+      <p>&bull; 11 de Janeiro - Envio das Provas &agrave; Comiss&atilde;o Organizadora</p>
+      <p>&bull; 10 a 14 de Fevereiro &ndash; Publica&ccedil;&atilde;o dos Resultados da Primeira Fase</p>
+      <p>&bull; 28 de Fevereiro &ndash; Inscri&ccedil;&otilde;es na Fase Final</p>
+      <p>&bull; 26 a 28 Abril &ndash; Fase Final</p>
+     </div>
+
+     <button class="accordion w3-padding-16">
+      <span class="w3-large"><b>Equipa</b></span>
+     </button>
+     <div class="panel">
+      <p>A Comiss&atilde;o Organizadora das Olimp&iacute;adas da Economia &eacute; constitu&iacute;da por 44 pessoas, sendo João Pedro Santos o atual Coordenador Geral, Mariana Flora Ramos a Coordenadora Operacional e encontrando-se subdividida em 4 departamentos:</p>
+      <ul class="w3-ul w3-white">
+
+       <li class="w3-padding-16 w3-white">
+        <span class="w3-medium"><b>Cient&iacute;fico:</b></span><br>
+        <span>Tem como principais objetivos a conce&ccedil;&atilde;o e corre&ccedil;&atilde;o das provas da Primeira fase, estrutura&ccedil;&atilde;o e planifica&ccedil;&atilde;o da Fase Final, conce&ccedil;&atilde;o das provas da Fase Final e planeamento e conce&ccedil;&atilde;o dos desafios da Fase Final.</span><br>
+        <br>
+        
+        <!-- Hide this text on small devices -->
+        <span class="w3-hide-medium w3-hide-small"><b>Membros:</b></span><br>
+        <span class="w3-medium w3-hide-medium w3-hide-small">
+         <div class="row">
+          <div class="column">
+           &bull; Gonçalo Donato<br>
+           &bull; Marcos Figliuolo<br>
+           &bull; Daniela Santos<br>
+           &bull; Liliana Silva<br>
+          </div>
+          <div class="column">
+           &bull; C&eacute;sar Var&atilde;o<br>
+           &bull; Jo&atilde;o Pinheiro<br>
+           &bull; Filipa Mendes<br>
+           &bull; M&aacute;rio Domingos<br>
+          </div>
+         </div>
+        </span>
+       </li>
+
+       <li class="w3-padding-16 w3-white">
+        <span class="w3-medium"><b>Comunica&ccedil;&atilde;o e Escolas:</b></span><br>
+        <span>Tem como principais objetivos a gest&atilde;o das redes sociais do projeto, a comunica&ccedil;&atilde;o com as escolas e a cria&ccedil;&atilde;o do Merchandising das OE bem como de qualquer outro material necess&aacute;rio &agrave; Fase Final.</span><br>
+        <br>
+
+        <!-- Hide this text on small devices -->
+        <span class="w3-hide-medium w3-hide-small"><b>Membros:</b></span><br>
+        <span class="w3-medium w3-hide-medium w3-hide-small">
+         <div class="row">
+          <div class="column">
+           &bull; Pedro Aleixo<br>
+           &bull; Carina Fonseca<br>
+           &bull; Sofia Neves<br>
+           &bull; Manuel Marques<br>
+           &bull; Rafael Vaz<br>
+          </div>
+          <div class="column">
+           &bull; Jo&atilde;o Lemos<br>
+           &bull; Maria Santos<br>
+           &bull; Filipe Murta<br>
+           &bull; Jo&atilde;o Gonzalez<br>
+           &bull; Andr&eacute; Almeida<br>
+          </div>
+         </div>
+        </span>
+       </li> 
+
+       <li class="w3-padding-16 w3-white">
+        <span class="w3-medium"><b>Log&iacute;stica e Eventos:</b></span><br>
+        <span>Tem como principais objetivos o planeamento log&iacute;stico da Fase Final, a organiza&ccedil;&atilde;o de eventos e aux&iacute;lio &agrave; prepara&ccedil;&atilde;o de provas e desafios da Fase Final.</span><br>
+        <br>
+
+        <!-- Hide this text on small devices -->
+        <span class="w3-hide-medium w3-hide-small"><b>Membros:</b></span><br>
+        <span class="w3-medium w3-hide-medium w3-hide-small">
+         <div class="row">
+          <div class="column">
+           &bull; Virginie Santos<br>
+           &bull; In&ecirc;s Rodrigues<br>
+           &bull; Sérgio Minas<br>
+           &bull; Lara Meco <br>
+           &bull; In&ecirc;s Vicente<br>
+           &bull; Carolina Carvalho<br>
+          </div>
+          <div class="column">
+           &bull; In&ecirc;s Maria Silva<br>
+           &bull; Bernardo Henriques<br>
+           &bull; Joana Vilar<br>
+           &bull; Iara Soalheiro<br>
+           &bull; Rita Marques<br>
+           &bull; Maria Cravo<br>
+          </div>
+         </div>
+        </span>
+       </li>
+
+       <li class="w3-padding-16 w3-white">
+        <span class="w3-medium"><b>Parceiros:</b></span><br>
+        <span>Tem como principais objetivos contactar com potenciais parceiros e media partners assim como angariar financiamento e bens para a Fase Final.</span><br>
+        <br>
+
+        <!-- Hide this text on small devices -->
+        <span class="w3-hide-medium w3-hide-small"><b>Membros:</b></span><br>
+        <span class="w3-medium w3-hide-medium w3-hide-small">
+         <div class="row">
+          <div class="column">
+           &bull; Patr&iacute;cia Santos<br>
+           &bull; Diogo Esteves<br>
+          </div>
+          <div class="column">
+           &bull; Maria Duarte Rodrigues<br>
+           &bull; Sara Santos<br>
+          </div>
+         </div>
+        </span>
+       </li>
+
+      </ul>
+     </div>
+
+    </ul>
+  </div>
+
+</div>
+
+<div class="w3-content w3-container custom-pad-16x64">
+ <h3 class="w3-center"><em>PARCEIROS</em></h3>
+
+  <div class="w3-row-padding w3-center">
+    <div class="w3-col m4">
+      <a target="_blank" href="http://www.uc.pt/feuc"><img src="https://i.imgur.com/JMbZUC7.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="FEUC"></a>
+    </div>
+
+    <div class="w3-col m4">
+      <a target="_blank" href="http://www.uc.pt/"><img src="https://i.imgur.com/6dPQTky.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="UC"></a>
+    </div>
+
+    <div class="w3-col m4">
+      <a target="_blank" href="http://academica.pt/"><img src="https://i.imgur.com/7p3kvUN.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="AAC"></a>
+    </div>
+  </div>
+
+  <div class="w3-row-padding w3-center w3-section">
+    <div class="w3-col m3">
+      <a target="_blank" href="https://www.cm-coimbra.pt/"><img src="https://i.imgur.com/fKNkHHD.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="CMC"></a>
+    </div>
+
+    <div class="w3-col m3">
+      <a target="_blank" href="http://apeu.fe.uc.pt/"><img src="https://i.imgur.com/K8TXish.png" style="width:100%" onclick="onClick(this);" class="w3-hover-opacity" alt="APEU"></a>
+    </div>
+
+    <div class="w3-col m3">
+      <a target="_blank" href="https://www.arealeditores.pt/"><img src="https://i.imgur.com/JCPrnmL.png" style="width:100%" onclick="onClick(this);" class="w3-hover-opacity" alt="Areal Editores"></a>
+    </div>
+
+    <div class="w3-col m3">
+      <a target="_blank" href="http://www.nautilus.pt/"><img src="https://i.imgur.com/D5xyeO6.png" style="width:100%" onclick="onClick(this);" class="w3-hover-opacity" alt="Nautilus"></a>
+    </div>
+  </div>
+
+  <div class="w3-row-padding w3-center w3-section">
+    <div class="w3-col m3">
+      <a target="_blank" href="http://www.tagv.pt/"><img src="https://i.imgur.com/anTUPA6.png" style="width:100%" onclick="onClick(this);" class="w3-hover-opacity" alt="TAGV"></a>
+    </div>
+
+    <div class="w3-col m3">
+      <a target="_blank" href="http://www.tvaac.pt/"><img src="https://i.imgur.com/itDmP4b.png" style="width:100%" onclick="onClick(this);" class="w3-hover-opacity" alt="tvAAC"></a>
+    </div>
+
+    <div class="w3-col m3">
+      <a target="_blank" href="https://www.intermarche.pt/"><img src="https://i.imgur.com/EzIX3vJ.png" style="width:100%" onclick="onClick(this);" class="w3-hover-opacity" alt="Intermarch&eacute;"></a>
+    </div>
+
+    <div class="w3-col m3">
+      <a target="_blank" href="http://www.trintaenove.com/"><img src="https://i.imgur.com/dvPJ5Jf.png" style="width:100%" onclick="onClick(this);" class="w3-hover-opacity" alt="Restaurante 39"></a>
+    </div>
+  </div>
+</div>
+
+<!-- Fourth Parallax Image with Portfolio Text -->
+<div class="bgimg-4 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+     <span class="w3-xxlarge w3-text-white w3-wide">CONTACTOS</span>
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div class="w3-content w3-container w3-padding-64" id="contact">
+  <h3 class="w3-center"><em>QUALQUER PERGUNTA, CONTACTE-NOS EM:</em></h3>
+
+  <div class="w3-row w3-padding-32 w3-section">
+    <div class="w3-col m4 w3-container">
+      <!-- Add Google Maps -->
+      <div id="googleMap" class="w3-round-large w3-greyscale" style="width:100%;height:325px;"></div>
+    </div>
+    <div class="w3-col m8 w3-panel">
+      <div class="w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Av. Dr. Dias da Silva, 165, 3004-512, Coimbra, Portugal<br>
+        <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Telemóvel:<br>
+        &bull; 960271756<br>
+        &bull; 910149093 (WhatsApp)<br>
+        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email:<br>
+        &bull; geral.olimpiadas@fe.uc.pt<br>
+        &bull; escolas.olimpiadas@fe.uc.pt<br>
+        &bull; parceiros.olimpiadas@fe.uc.pt<br>
+      </div>
+      <p>Em caso de email, escolher aquele que se ajusta &agrave; raz&atilde;o de contacto.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-red w3-padding-32">
+  <div class="w3-xlarge w3-section">
+    <a target="_blank" href="https://www.facebook.com/unedoismundos/"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>&nbsp&nbsp&nbsp&nbsp&nbsp
+    <a target="_blank" href="https://www.instagram.com/olimpiadaseconomia/"><i class="fa fa-instagram w3-hover-opacity"></i></a>&nbsp&nbsp&nbsp&nbsp&nbsp
+    <a target="_blank" href="https://www.linkedin.com/company/unedoismundos/"><i class="fa fa-linkedin w3-hover-opacity"></i></a>&nbsp&nbsp&nbsp&nbsp&nbsp
+    <a target="_blank" href="https://pt.wikipedia.org/wiki/Olimpíadas_da_Economia"><i class="fa fa-wikipedia-w w3-hover-opacity"></i></a>
+  </div>
+</footer>
+ 
+<!-- Add Google Maps -->
+<script>
+function myMap()
+{
+  myCenter=new google.maps.LatLng(40.2147661, -8.4091276);
+  var mapOptions= {
+    center:myCenter,
+    zoom:12, scrollwheel: false, draggable: false,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
+
+  var marker = new google.maps.Marker({
+    position: myCenter,
+  });
+  marker.setMap(map);
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+    }
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+
+var acc = document.getElementsByClassName("accordion1");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active1");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBizghTzBv2K2DLmJ-iZVu3gE0meLnNNvA&callback=myMap"></script>
+
+</body>
+</html>
