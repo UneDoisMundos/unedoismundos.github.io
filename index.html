@@ -53,8 +53,8 @@ body, html {
         background-attachment: scroll;
     }
 }
-/* Accordion CSS*/
-.accordion {
+/* accordion-plus CSS*/
+.accordion-plus {
     background-color: white;
     color: #444;
     cursor: pointer;
@@ -66,7 +66,7 @@ body, html {
     font-size: 15px;
     transition: 0.4s;
 }
-.active, .accordion:hover {
+.active, .accordion-plus:hover {
     background-color: #ccc;
 }
 .panel {
@@ -75,7 +75,7 @@ body, html {
     overflow: hidden;
     transition: max-height 0.2s ease-out;
 }
-.accordion:after {
+.accordion-plus:after {
     content: '\002B';
     color: black;
     font-weight: bold;
@@ -85,8 +85,8 @@ body, html {
 .active:after {
     content: "\2212";
 }
-/* Accordion1 CSS */
-.accordion1 {
+/* accordion-blank CSS */
+.accordion-blank {
     background-color: white;
     color: #444;
     cursor: pointer;
@@ -98,7 +98,7 @@ body, html {
     font-size: 15px;
     transition: 0.4s;
 }
-.active1, .accordion1:hover {
+.active1, .accordion-blank:hover {
     background-color: #ccc;
 }
 .panel1 {
@@ -107,7 +107,7 @@ body, html {
     overflow: hidden;
     transition: max-height 0.2s ease-out;
 }
-.accordion1:after {
+.accordion-blank:after {
     color: black;
     font-weight: bold;
     float: right;
@@ -220,7 +220,7 @@ body, html {
      <div class="w3-card-4 w3-margin w3-white">
       <img src="https://i.imgur.com/x7G7PSN.png" alt="OBEcon" style="width:100%">
 
-      <button class="accordion1 w3-container">
+      <button class="accordion-blank w3-container">
        <h3><b>Reunião com as International Economics Olympiads e OBECON</b></h3>
        <h5>Olimp&iacute;adas da Economia no mundo, <span class="w3-opacity">30 de Junho de 2018</span></h5>
       </button>
@@ -235,7 +235,7 @@ body, html {
      <div class="w3-card-4 w3-margin w3-white">
       <img src="https://i.imgur.com/xGvH8z1.png" alt="OBEcon" style="width:100%">
 
-      <button class="accordion1 w3-container">
+      <button class="accordion-blank w3-container">
        <h3><b>OBECON</b></h3>
        <h5>Olimp&iacute;adas da Economia surgem no Brasil, <span class="w3-opacity">08 de Junho de 2018</span></h5>
       </button>
@@ -251,7 +251,7 @@ body, html {
      <div class="w3-card-4 w3-margin w3-white">
       <img src="https://i.imgur.com/jyhi0RS.png" alt="OBEcon" style="width:100%">
 
-      <button class="accordion1 w3-container">
+      <button class="accordion-blank w3-container">
        <h3><b>Economia da Felicidade pr&oacute;ximo tema das Olimp&iacute;adas da Economia</b></h3>
        <h5>Tema da Edi&ccedil;&atilde;o VI, <span class="w3-opacity">17 de Abril de 2018</span></h5>
       </button>
@@ -265,7 +265,7 @@ body, html {
    <!-- Blog entry -->
     <div class="w3-card-4 w3-margin w3-white">
      <img src="https://i.imgur.com/GgUqQAF.png" alt="OE V" style="width:100%">
-     <button class="accordion1 w3-container">
+     <button class="accordion-blank w3-container">
       <h3><b>Jo&atilde;o Carvalho conquista V Olimp&iacute;adas da Economia</b></h3>
       <h5>Jo&atilde;o Pedro Carvalho, Maria Ana Morais, Catarina Peixoto e Ana Moreira s&atilde;o os Premiados desta V Edi&ccedil;&atilde;o, <span class="w3-opacity">15 de Abril, 2018</span></h5>
      </button>
@@ -299,7 +299,7 @@ body, html {
    <div class="w3-row-padding w3-justify">
     <ul class="w3-ul w3-hoverable w3-white">
 
-     <button class="accordion w3-padding-16">
+     <button class="accordion-plus w3-padding-16">
       <span class="w3-large"><b>Formul&aacute;rio de Inscri&ccedil;&atilde;o</b></span>
      </button>
      <div class="panel">
@@ -307,7 +307,7 @@ body, html {
      </div>
 
      <!-- Regulamento -->
-     <button class="accordion w3-padding-16">
+     <button class="accordion-plus w3-padding-16">
       <span class="w3-large"><b>Regulamento</b></span>
      </button>
      <div class="panel">
@@ -315,7 +315,7 @@ body, html {
      </div>
 
      <!-- Provas-Tipo -->
-     <button class="accordion w3-padding-16">
+     <button class="accordion-plus w3-padding-16">
       <span class="w3-large"><b>Provas-Tipo</b></span>
      </button>
      <div class="panel">
@@ -327,7 +327,7 @@ body, html {
      </div>
 
      <!-- Calendar -->
-     <button class="accordion w3-padding-16">
+     <button class="accordion-plus w3-padding-16">
       <span class="w3-large"><b>Calend&aacute;rio</b></span>
      </button>
      <div class="panel">
@@ -341,7 +341,7 @@ body, html {
      </div>
 
      <!-- Equipa -->
-     <button class="accordion w3-padding-16">
+     <button class="accordion-plus w3-padding-16">
       <span class="w3-large"><b>Equipa</b></span>
      </button>
      <div class="panel">
@@ -600,7 +600,7 @@ function toggleFunction() {
         x.className = x.className.replace(" w3-show", "");
     }
 }
-var acc = document.getElementsByClassName("accordion");
+var acc = document.getElementsByClassName("accordion-plus");
 var i;
 for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function() {
@@ -613,7 +613,7 @@ for (i = 0; i < acc.length; i++) {
     } 
   });
 }
-var acc = document.getElementsByClassName("accordion1");
+var acc = document.getElementsByClassName("accordion-blank");
 var i;
 for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function() {
