@@ -19,7 +19,7 @@ body, html {
     line-height: 1.8;
 }
 /* Create a Parallax Effect */
-.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5 {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -27,7 +27,7 @@ body, html {
 }
 /* First image (Logo. Full height) */
 .bgimg-1 {
-    background-image: url("https://i.imgur.com/sTe3xp7.png");
+    background-image: url("https://i.imgur.com/ZCdyILl.png");
     min-height: 100%;
 }
 /* Second image (Portfolio) */
@@ -42,6 +42,11 @@ body, html {
 }
 /* Fourth image (Contact) */
 .bgimg-4 {
+    background-image: url("https://i.imgur.com/cnLHJKo.jpg");
+    min-height: 400px;
+}
+/* Fourth image (Contact) */
+.bgimg-5 {
     background-image: url("https://i.imgur.com/OR2AIVI.jpg");
     min-height: 400px;
 }
@@ -115,11 +120,13 @@ body, html {
 }
 .active1:after {
 }
+
 /* Div Format */
-.column {
+.column-half {
     float: left;
     width: 50%;
 }
+
 .row:after {
     content: "";
     display: table;
@@ -129,8 +136,42 @@ body, html {
 .custom-pad-64x16 {
    padding: 64px 64px 16px 64px;
 }
+
 .custom-pad-16x64 {
    padding: 16px 64px 64px 64px;
+}
+
+/* Custom Styles */
+.custom-pad-64x16 {
+   padding: 64px 64px 16px 64px;
+}
+
+.custom-pad-16x64 {
+   padding: 16px 64px 64px 64px;
+}
+
+.card-testimony {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 455px;
+    margin: auto;
+    text-align: center;
+}
+
+.card-testimony-single {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 930px;
+    margin: auto;
+    text-align: center;
+}
+
+.title-card {
+    color: grey;
+    font-size: 18px;
+}
+
+.body-card {
+    color: black;
+    font-size: 15px;
 }
 </style>
 <body>
@@ -142,6 +183,7 @@ body, html {
       <i class="fa fa-bars"></i>
     </a>
     <a style="color: #e81d25" href="#contact" class="w3-bar-item w3-button w3-hide-small w3-right"><i class="fa fa-envelope"></i><strong> CONTACTOS</strong></a>
+    <a style="color: #e81d25" href="#testimony" class="w3-bar-item w3-button w3-hide-small w3-right"><i class="fa fa-id-card-o"></i><strong> TESTEMUNHOS</strong></a>
     <a style="color: #e81d25" href="#documents" class="w3-bar-item w3-button w3-hide-small w3-right"><i class="fa fa-file-text-o"></i><strong> INFORMA&Ccedil;&Otilde;ES</strong></a>
     <a style="color: #e81d25" href="#portfolio" class="w3-bar-item w3-button w3-hide-small w3-right"><i class="fa fa-th"></i><strong> NOT&Iacute;CIAS</strong></a>
     <a style="color: #e81d25" href="#about" class="w3-bar-item w3-button w3-hide-small w3-right"><i class="fa fa-user"></i><strong> SOBRE N&Oacute;S</strong></a>
@@ -249,7 +291,7 @@ body, html {
 	   
    <!-- Blog entry -->
      <div class="w3-card-4 w3-margin w3-white">
-      <img src="https://i.imgur.com/jyhi0RS.png" alt="OBEcon" style="width:100%">
+      <img src="https://i.imgur.com/ZCdyILl.png" alt="OBEcon" style="width:100%">
 
       <button class="accordion-blank w3-container">
        <h3><b>Economia da Felicidade pr&oacute;ximo tema das Olimp&iacute;adas da Economia</b></h3>
@@ -303,7 +345,7 @@ body, html {
       <span class="w3-large"><b>Formul&aacute;rio de Inscri&ccedil;&atilde;o</b></span>
      </button>
      <div class="panel">
-      <p>As inscri&ccedil;&otilde;es para a primeira fase VI Edi&ccedil;&atilde;o das Olimp&iacute;adas da Economia estar&atilde;o abertas apartir de dia 2 de Novembro de 2018 at&eacute; 6 de Janeiro de 2019 e podem ser realizadas no seguinte <a target="_blank" href="https://goo.gl/forms/JKolsFAkpK5Z2ZHA2"><b>Formul&aacute;rio</b></a>.</p>
+      <p>As inscri&ccedil;&otilde;es para a primeira fase VI Edi&ccedil;&atilde;o das Olimp&iacute;adas da Economia estar&atilde;o abertas apartir de dia 2 de Novembro de 2018 at&eacute; 12 de Janeiro de 2019 e podem ser realizadas no seguinte <a target="_blank" href="https://goo.gl/forms/JKolsFAkpK5Z2ZHA2"><b>Formul&aacute;rio</b></a>.</p>
      </div>
 
      <!-- Regulamento -->
@@ -332,10 +374,10 @@ body, html {
      </button>
      <div class="panel">
       <p>A calendariza&ccedil;&atilde;o das VI Olimp&iacute;adas da Economia estar&aacute; planeada para as seguintes datas:</p>
-      <p>&bull; 2 de Novembro a 6 Janeiro &ndash; Inscri&ccedil;&otilde;es na Primeira Fase</p>
-      <p>&bull; 9 de Janeiro &ndash; Primeira Fase</p>
-      <p>&bull; 11 de Janeiro - Envio das Provas &agrave; Comiss&atilde;o Organizadora</p>
-      <p>&bull; 10 a 14 de Fevereiro &ndash; Publica&ccedil;&atilde;o dos Resultados da Primeira Fase</p>
+      <p>&bull; 2 de Novembro a 12 Janeiro &ndash; Inscri&ccedil;&otilde;es na Primeira Fase</p>
+      <p>&bull; 16 de Janeiro &ndash; Primeira Fase</p>
+      <p>&bull; 18 de Janeiro - Envio das Provas &agrave; Comiss&atilde;o Organizadora</p>
+      <p>&bull; 14 de Fevereiro &ndash; Publica&ccedil;&atilde;o dos Resultados da Primeira Fase</p>
       <p>&bull; 28 de Fevereiro &ndash; Inscri&ccedil;&otilde;es na Fase Final</p>
       <p>&bull; 26 a 28 Abril &ndash; Fase Final</p>
      </div>
@@ -345,7 +387,7 @@ body, html {
       <span class="w3-large"><b>Equipa</b></span>
      </button>
      <div class="panel">
-      <p>A Comiss&atilde;o Organizadora das Olimp&iacute;adas da Economia &eacute; constitu&iacute;da por 36 pessoas, sendo João Pedro Santos o atual Coordenador Geral e Mariana Flora Ramos a Coordenadora Operacional.</p>
+      <p>A Comiss&atilde;o Organizadora das Olimp&iacute;adas da Economia &eacute; constitu&iacute;da por 45 pessoas, sendo João Pedro Santos o atual Coordenador Geral, Mariana Flora Ramos a Coordenadora Operacional e Maria Santos a Coordenadora da Fase Final.</p>
       <p>Encontramo-nos ainda divididos em 4 Departamentos com os seguintes Objectivos:</p>
       <ul class="w3-ul w3-white">
 
@@ -358,17 +400,20 @@ body, html {
         <span class="w3-hide-medium w3-hide-small"><b>Membros:</b></span><br>
         <span class="w3-medium w3-hide-medium w3-hide-small">
          <div class="row">
-          <div class="column">
-           &bull; Gonçalo Donato<br>
+          <div class="column-half">
+           &bull; Gonçalo Donato (Coordenador)<br>
+           &bull; C&eacute;sar Var&atilde;o<br>
            &bull; Marcos Figliuolo<br>
            &bull; Daniela Santos<br>
            &bull; Liliana Silva<br>
+           &bull; Filipe Martins<br>
           </div>
-          <div class="column">
-           &bull; C&eacute;sar Var&atilde;o<br>
+          <div class="column-half">
+           &bull; Francisco Nobre<br>
            &bull; Jo&atilde;o Pinheiro<br>
            &bull; Filipa Mendes<br>
            &bull; M&aacute;rio Domingos<br>
+           &bull; Marta Matias<br>
           </div>
          </div>
         </span>
@@ -383,16 +428,16 @@ body, html {
         <span class="w3-hide-medium w3-hide-small"><b>Membros:</b></span><br>
         <span class="w3-medium w3-hide-medium w3-hide-small">
          <div class="row">
-          <div class="column">
-           &bull; Pedro Aleixo<br>
+          <div class="column-half">
+           &bull; Pedro Aleixo (Coordenador)<br>
            &bull; Carina Fonseca<br>
            &bull; Sofia Neves<br>
            &bull; Manuel Marques<br>
            &bull; Rafael Vaz<br>
           </div>
-          <div class="column">
+          <div class="column-half">
            &bull; Jo&atilde;o Lemos<br>
-           &bull; Maria Santos<br>
+           &bull; Maria Ana Morais<br>
            &bull; Filipe Murta<br>
            &bull; Jo&atilde;o Gonzalez<br>
            &bull; Andr&eacute; Almeida<br>
@@ -410,19 +455,20 @@ body, html {
         <span class="w3-hide-medium w3-hide-small"><b>Membros:</b></span><br>
         <span class="w3-medium w3-hide-medium w3-hide-small">
          <div class="row">
-          <div class="column">
-           &bull; Virginie Santos<br>
+          <div class="column-half">
+           &bull; Iara Soalheiro (Coordenadora)<br>
            &bull; In&ecirc;s Rodrigues<br>
            &bull; Sérgio Minas<br>
            &bull; Lara Meco <br>
            &bull; In&ecirc;s Vicente<br>
            &bull; Carolina Carvalho<br>
+           &bull; José Moreira<br>
           </div>
-          <div class="column">
+          <div class="column-half">
            &bull; In&ecirc;s Maria Silva<br>
            &bull; Bernardo Henriques<br>
            &bull; Joana Vilar<br>
-           &bull; Iara Soalheiro<br>
+           &bull; Virginie Santos<br>
            &bull; Rita Marques<br>
            &bull; Maria Cravo<br>
           </div>
@@ -439,13 +485,17 @@ body, html {
         <span class="w3-hide-medium w3-hide-small"><b>Membros:</b></span><br>
         <span class="w3-medium w3-hide-medium w3-hide-small">
          <div class="row">
-          <div class="column">
-           &bull; Patr&iacute;cia Santos<br>
+          <div class="column-half">
+           &bull; Patr&iacute;cia Santos (Coordenadora)<br>
            &bull; Diogo Esteves<br>
+           &bull; Daniel Aragão<br>
+           &bull; Margarida Gonçalves<br>
           </div>
-          <div class="column">
+          <div class="column-half">
            &bull; Maria Duarte Rodrigues<br>
            &bull; Sara Santos<br>
+           &bull; Patrícia Macedo<br>
+           &bull; Diana Ferreira<br>
           </div>
          </div>
         </span>
@@ -516,8 +566,116 @@ body, html {
   </div>
 </div>
 
-<!-- Fourth Parallax Image with Portfolio Text -->
-<div class="bgimg-4 w3-display-container w3-opacity-min">
+
+<!-- Fourth Parallax with Testemony Text -->
+<div class="bgimg-4 w3-display-container w3-opacity-min w3-hide-medium w3-hide-small">
+
+  <div class="w3-display-middle">
+     <span class="w3-xxlarge w3-text-white w3-wide">TESTEMUNHOS</span>
+  </div>
+
+</div>
+
+<!-- Container (Contact Section) -->
+<div class="w3-content w3-container w3-padding-64 w3-hide-medium w3-hide-small" id="testimony">
+  <h3 class="w3-center"><em>ANTIGOS PARTICIPANTES:</em></h3>
+
+  <div class="w3-row w3-padding-32">
+
+    <div class="column-half">
+     <div class="card-testimony">
+
+      <button class="accordion-blank w3-padding-16 w3-hide-medium w3-hide-small" style="text-align: center;">
+       <span class="w3-large">
+        <h1>Francisco Marques</h1>
+        <p class="title-card">Coimbra, Participante OE II e III</p>
+       </span>
+      </button>
+
+      <div class="panel1 w3-container" style="text-align: justify;">
+       <p class="body-card">As OE para mim s&atilde;o a defini&ccedil;&atilde;o de inova&ccedil;&atilde;o, empreendedorismo e companheirismo.</p>
+      </div>
+
+     </div>
+    </div>
+
+
+    <div class="column-half">
+     <div class="card-testimony">
+
+      <button class="accordion-blank w3-padding-16 w3-hide-medium w3-hide-small" style="text-align: center;">
+       <span class="w3-large">
+        <h1>Henrique Leal</h1>
+        <p class="title-card">Viseu, Participante OE I e II</p>
+       </span>
+      </button>
+
+      <div class="panel1 w3-container" style="text-align: justify;">
+       <p class="body-card">As olimp&iacute;adas foram um momento de aprendizagem e felicidade onde consegui fazer novas amizades e abrir novos horizontes.</p>
+      </div>
+
+     </div>
+    </div>
+  </div>
+
+  <div class="w3-row w3-padding-32">
+   <div class="card-testimony-single">
+
+    <button class="accordion-blank w3-padding-16 w3-hide-medium w3-hide-small" style="text-align: center;">
+     <span class="w3-large">
+      <h1>Carolina Domingues</h1>
+      <p class="title-card">Ansi&atilde;o, Participante OE III e IV</p>
+     </span>
+    </button>
+
+    <div class="panel1 w3-container" style="text-align: justify;">
+     <p class="body-card">Como concorrente de duas edi&ccedil;&otilde;es consecutivas das Olimp&iacute;adas da Economia, posso afirmar que as OE mudaram a minha maneira de pensar e viver a Economia.<br />Enquanto alunos do secund&aacute;rio, ainda temos algumas d&uacute;vidas acerca daquilo que &eacute; a Economia e do papel que representa no nosso quotidiano. As OE surgem ent&atilde;o como uma oportunidade de debater estas quest&otilde;es, e de nos dar a conhecer mais sobre estas tem&aacute;ticas de uma maneira n&atilde;o t&atilde;o convencional, ao mesmo tempo que nos confere a oportunidade de conhecer colegas oriundos de diferentes zonas do pa&iacute;s e membros da Organiza&ccedil;&atilde;o, mais velhos e mais experientes. As amizades que se levam das OE s&atilde;o muito valiosas e essa &eacute; uma das principais raz&otilde;es que me fez gostar tanto da experi&ecirc;ncia.<br />Por fim, &eacute; importante referir que as OE n&atilde;o s&oacute; me fizeram ganhar um interesse acrescido por esta ci&ecirc;ncia social, mas tamb&eacute;m pela cidade de Coimbra e pelas suas mais variadas institui&ccedil;&otilde;es.</p>
+    </div>
+
+   </div>
+  </div>
+
+  <div class="w3-row w3-padding-32">
+
+    <div class="column-half">
+     <div class="card-testimony">
+
+      <button class="accordion-blank w3-padding-16 w3-hide-medium w3-hide-small" style="text-align: center;">
+       <span class="w3-large">
+        <h1>Alexandre Lopes</h1>
+        <p class="title-card">Ansi&atilde;o, Participante OE II, III e IV</p>
+       </span>
+      </button>
+
+      <div class="panel1 w3-container" style="text-align: justify;">
+       <p class="body-card">As OE, para al&eacute;m de ser o maior projeto de forma&ccedil;&atilde;o econ&oacute;mica do pa&iacute;s para alunos do secund&aacute;rio, representam a UC, a cidade de Coimbra e, acima de tudo, a vontade de um melhor ensino da Economia em Portugal.</p>
+      </div>
+
+     </div>
+    </div>
+
+
+    <div class="column-half">
+     <div class="card-testimony">
+
+      <button class="accordion-blank w3-padding-16 w3-hide-medium w3-hide-small" style="text-align: center;">
+       <span class="w3-large">
+        <h1>Duarte Marques</h1>
+        <p class="title-card">Coimbra, Participante OE III</p>
+       </span>
+      </button>
+
+      <div class="panel1 w3-container" style="text-align: justify;">
+       <p class="body-card">As olimp&iacute;adas da economia s&atilde;o um espa&ccedil;o que junta o formal e o informal e nos torna mais capazes de ver o futuro que queremos escolher! Abre portas que d&ecirc; outra maneira nunca saber&iacute;amos que existiriam.</p>
+      </div>
+
+     </div>
+    </div>
+  </div>
+
+</div>
+<!-- Fifth Parallax Image with Portfolio Text -->
+<div class="bgimg-5 w3-display-container w3-opacity-min">
   <div class="w3-display-middle">
      <span class="w3-xxlarge w3-text-white w3-wide">CONTACTOS</span>
   </div>
@@ -615,9 +773,10 @@ for (i = 0; i < acc.length; i++) {
 }
 var acc = document.getElementsByClassName("accordion-blank");
 var i;
+
 for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function() {
-    this.classList.toggle("active1");
+    this.classList.toggle("active-blank");
     var panel = this.nextElementSibling;
     if (panel.style.maxHeight){
       panel.style.maxHeight = null;
