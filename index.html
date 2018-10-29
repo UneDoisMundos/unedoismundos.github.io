@@ -40,9 +40,9 @@ body, html {
     background-image: url("https://i.imgur.com/bao627g.jpg");
     min-height: 400px;
 }
-/* Fourth image (Contact) */
+/* Fourth image (Testemony) */
 .bgimg-4 {
-    background-image: url("https://i.imgur.com/cnLHJKo.jpg");
+    background-image: url("https://i.imgur.com/wBO8QXO.jpg");
     min-height: 400px;
 }
 /* Fourth image (Contact) */
@@ -514,16 +514,20 @@ body, html {
  <h3 class="w3-center"><em>PARCEIROS</em></h3>
 
   <div class="w3-row-padding w3-center">
-    <div class="w3-col m4">
+    <div class="w3-col m3">
       <a target="_blank" href="http://www.uc.pt/feuc"><img src="https://i.imgur.com/JMbZUC7.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="FEUC"></a>
     </div>
 
-    <div class="w3-col m4">
-      <a target="_blank" href="http://www.uc.pt/"><img src="https://i.imgur.com/6dPQTky.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="UC"></a>
+    <div class="w3-col m3">
+      <a target="_blank" href="http://www.uc.pt/"><img src="http://www.uc.pt/identidadevisual/marcaUC_submarcas/UC/UC_PR.png?hires" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="UC"></a>
     </div>
 
-    <div class="w3-col m4">
+    <div class="w3-col m3">
       <a target="_blank" href="http://academica.pt/"><img src="https://i.imgur.com/7p3kvUN.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="AAC"></a>
+    </div>
+
+    <div class="w3-col m3">
+      <a target="_blank" href="http://www.pnl2027.gov.pt/np4/home"><img src="https://i.imgur.com/XGNcgjU.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Ler+"></a>
     </div>
   </div>
 
@@ -776,7 +780,7 @@ var i;
 
 for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function() {
-    this.classList.toggle("active-blank");
+    this.classList.toggle("active1");
     var panel = this.nextElementSibling;
     if (panel.style.maxHeight){
       panel.style.maxHeight = null;
