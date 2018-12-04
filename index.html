@@ -217,32 +217,34 @@ hr {
     margin: 4px 2px;
     cursor: pointer;
 }
-
+.untouchable {
+	pointer-events: none;
+}
 </style>
 <body>
 
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar" id="myNavbar">
-    <a class="w3-bar-item w3-button w3-hover-red w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+    <a class="w3-bar-item w3-button w3-hover-red w3-hide-medium w3-hide-large w3-left" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
       <i class="fas fa-bars"></i>
     </a>
-    <a style="color: #e81d25" href="#contact" class="w3-bar-item w3-button w3-hide-small w3-right"><i class="fas fa-mail-bulk"></i><strong>&nbsp;CONTACTOS</strong></a>
-    <a style="color: #e81d25" href="#merch" class="w3-bar-item w3-button w3-hide-small w3-right"><i class="fas fa-tshirt"></i><strong>&nbsp;MERCHANDISING</strong></a>
-    <a style="color: #e81d25" href="#crowdfund" class="w3-bar-item w3-button w3-hide-small w3-right"><i class="fas fa-handshake"></i><strong>&nbsp;CROWDFUNDING</strong></a>
-    <a style="color: #e81d25" href="#testimony" class="w3-bar-item w3-button w3-hide-small w3-right"><i class="fas fa-id-card"></i><strong>&nbsp;TESTEMUNHOS</strong></a>
-    <a style="color: #e81d25" href="#provas-tipo" class="w3-bar-item w3-button w3-hide-small w3-right"><i class="fas fa-file-alt"></i><strong>&nbsp;PROVAS-TIPO</strong></a>
-    <a style="color: #e81d25" href="#documents" class="w3-bar-item w3-button w3-hide-small w3-right"><i class="fas fa-info-circle"></i><strong>&nbsp;INFORMA&Ccedil;&Otilde;ES</strong></a>
-    <a style="color: #e81d25" href="#portfolio" class="w3-bar-item w3-button w3-hide-small w3-right"><i class="fas fa-newspaper"></i><strong>&nbsp;NOT&Iacute;CIAS</strong></a>
-    <a style="color: #e81d25" href="#about" class="w3-bar-item w3-button w3-hide-small w3-right"><i class="fas fa-user"></i><strong>&nbsp;SOBRE N&Oacute;S</strong></a>
-    <a style="color: #e81d25" href="#home" class="w3-bar-item w3-button w3-right"><strong>&nbsp;IN&Iacute;CIO</strong></a>
+    <a style="color: #e81d25" href="#home" class="w3-bar-item w3-button w3-left"><strong>&nbsp;IN&Iacute;CIO</strong></a>
+    <a style="color: #e81d25" href="#about" class="w3-bar-item w3-button w3-hide-small w3-left"><i class="fas fa-user"></i><strong>&nbsp;SOBRE N&Oacute;S</strong></a>
+    <a style="color: #e81d25" href="#news" class="w3-bar-item w3-button w3-hide-small w3-left"><i class="fas fa-newspaper"></i><strong>&nbsp;NOT&Iacute;CIAS</strong></a>
+    <a style="color: #e81d25" href="#info" class="w3-bar-item w3-button w3-hide-small w3-left"><i class="fas fa-info-circle"></i><strong>&nbsp;INFORMA&Ccedil;&Otilde;ES</strong></a>
+    <a style="color: #e81d25" href="#provas-tipo" class="w3-bar-item w3-button w3-hide-small w3-left"><i class="fas fa-file-alt"></i><strong>&nbsp;PROVAS-TIPO</strong></a>
+    <a style="color: #e81d25" href="#testimony" class="w3-bar-item w3-button w3-hide-small w3-left"><i class="fas fa-id-card"></i><strong>&nbsp;TESTEMUNHOS</strong></a>
+    <a style="color: #e81d25" href="#crowdfund" class="w3-bar-item w3-button w3-hide-small w3-left"><i class="fas fa-handshake"></i><strong>&nbsp;CROWDFUNDING</strong></a>
+    <a style="color: #e81d25" href="#merch" class="w3-bar-item w3-button w3-hide-small w3-left"><i class="fas fa-tshirt"></i><strong>&nbsp;MERCHANDISING</strong></a>
+    <a style="color: #e81d25" href="#contact" class="w3-bar-item w3-button w3-hide-small w3-left"><i class="fas fa-mail-bulk"></i><strong>&nbsp;CONTACTOS</strong></a>
   </div>
 
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
     <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">SOBRE N&Oacute;S</a>
-    <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">NOT&Iacute;CIAS</a>
-    <a href="#documents" class="w3-bar-item w3-button"onclick="toggleFunction()">INFORMA&Ccedil;&Otilde;ES</a>
+    <a href="#news" class="w3-bar-item w3-button" onclick="toggleFunction()">NOT&Iacute;CIAS</a>
+    <a href="#info" class="w3-bar-item w3-button"onclick="toggleFunction()">INFORMA&Ccedil;&Otilde;ES</a>
     <a href="#crowdfund" class="w3-bar-item w3-button"onclick="toggleFunction()">CROWDFUNDING</a>
     <a href="#merch" class="w3-bar-item w3-button"onclick="toggleFunction()">MERCHANDISING</a>
     <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACTOS</a>
@@ -299,7 +301,7 @@ hr {
 </div>
 
 <!-- Container (Portfolio Section) -->
-<div class="w3-content w3-container w3-padding-48" id="portfolio">
+<div class="w3-content w3-container w3-padding-48" id="news">
   <h3 class="w3-center"><em>AS NOSSAS NOVIDADES</em></h3>
 
   <div class="w3-row-padding w3-center">
@@ -437,11 +439,13 @@ hr {
 </div>
 
 <!-- Container Document (Info) -->
-<div class="w3-content w3-container custom-pad-64x16" id="documents">
-  <h3 class="w3-center"><em>INFORMA&Ccedil;&Atilde;O ACERCA DAS OLIMP&Iacute;ADAS DA ECONOMIA</em></h3>
-  <br>
+<div class="w3-content w3-container w3-padding-48" id="info">
+ <div class="w3-container">
+ <h3 class="w3-center"><em>INFORMA&Ccedil;&Atilde;O ACERCA DAS OLIMP&Iacute;ADAS DA ECONOMIA</em></h3>
 
-   <div class="w3-row-padding w3-justify">
+ <br>
+
+ <div class="w3-row-padding w3-justify w3-text-black">
     <ul class="w3-ul w3-hoverable w3-white">
 
      <!-- Inscrição -->
@@ -475,22 +479,25 @@ hr {
       <p>&bull; 26 a 28 Abril &ndash; Fase Final</p>
      </div>
 
-    </ul>
-  </div>
-
+	</ul>
+ </div>
+ </div>
 </div>
+
 <div class="w3-content w3-container">
- <div class="w3-container w3-padding-32">
+ <div class="w3-container">
  <h3 class="w3-center"><em>A NOSSA EQUIPA</em></h3>
  <br>
- <span class="w3-text-black w3-justify">
- A Comiss&atilde;o Organizadora das Olimp&iacute;adas da Economia &eacute; constitu&iacute;da por 44 pessoas, sendo João Pedro Santos o atual Coordenador Geral, Mariana Flora Ramos a Coordenadora Operacional e Maria Santos a Coordenadora da Fase Final.<br><br>
- Encontramo-nos ainda divididos em 4 Departamentos com os seguintes Objectivos:
- </span>
- </div>
 
-  <div class="w3-row-padding w3-justify custom-pad-16x64">
+ <div class="w3-row-padding w3-justify w3-text-black">
     <ul class="w3-ul w3-hoverable w3-white">
+ 
+ 	<div class="w3-container">
+      <p>A <b>Comiss&atilde;o Organizadora das Olimp&iacute;adas da Economia</b> &eacute; constitu&iacute;da por <b>44 pessoas</b>, sendo João Pedro Santos o atual Coordenador Geral, Mariana Flora Ramos a Coordenadora Operacional e Maria Santos a Coordenadora da Fase Final.</p>
+ 	  <p>Encontramo-nos ainda divididos em <b>4 Departamentos</b> com os seguintes Objectivos:</p>
+ 	</div>
+
+ 	<br>
 
      <!-- Científico -->
      <button class="accordion-plus w3-padding-16">
@@ -501,7 +508,7 @@ hr {
       	<span>Tem como principais objetivos a concep&ccedil;&atilde;o e corre&ccedil;&atilde;o das provas da Primeira fase, estrutura&ccedil;&atilde;o e planifica&ccedil;&atilde;o da Fase Final, conce&ccedil;&atilde;o das provas da Fase Final e planeamento e conce&ccedil;&atilde;o dos desafios da Fase Final.</span><br>
 		<br>
 		<span><b>Coordenador:</b></span><br>
-		<div class="row">Gonçalo Donato</div><br>
+		<div class="row">Gon&ccedil;alo Donato</div><br>
         
 			<!-- Hide this text on small devices -->
 			<span class="w3-hide-medium w3-hide-small"><b>Membros:</b></span><br>
@@ -575,11 +582,11 @@ hr {
 			<div class="row">
 			<div class="column-half">
 			&bull; In&ecirc;s Rodrigues<br>
-			&bull; Sérgio Minas<br>
+			&bull; S&eacute;rgio Minas<br>
 			&bull; Lara Meco <br>
 			&bull; In&ecirc;s Vicente<br>
 			&bull; Carolina Carvalho<br>
-			&bull; José Moreira<br>
+			&bull; Jos&eacute; Moreira<br>
 			</div>
 			<div class="column-half">
 			&bull; In&ecirc;s Maria Silva<br>
@@ -612,27 +619,30 @@ hr {
 			<div class="row">
 			<div class="column-half">
 			&bull; Diogo Esteves<br>
-			&bull; Daniel Aragão<br>
+			&bull; Daniel Arag&atilde;o<br>
 			&bull; Margarida Gonçalves<br>
 			&bull; Diana Ferreira<br>
 			</div>
 			<div class="column-half">
 			&bull; Maria Duarte Rodrigues<br>
 			&bull; Sara Santos<br>
-			&bull; Patrícia Macedo<br>
+			&bull; Patr&iacute;cia Macedo<br>
 			</div>
 			</div>
 		</span>
 		<br>
      </div>
 	</ul>
-  </div>
+ </div>
+ </div>
 </div>
+
+<br>
 
 <!-- Container Document (Partner) -->
 <div class="w3-content w3-container custom-pad-16x64">
  <h3 class="w3-center"><em>OS NOSSOS PARCEIROS</em></h3>
- <br>
+
 
   <div class="w3-row-padding w3-center">
     <div class="w3-col m4">
@@ -640,7 +650,7 @@ hr {
     </div>
 
     <div class="w3-col m4">
-      <a target="_blank" href="http://www.uc.pt/"><img src="http://www.uc.pt/identidadevisual/marcaUC_submarcas/UC/UC_PR.png?hires" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="UC"></a>
+      <a target="_blank" href="http://www.uc.pt/"><img src="https://www.uc.pt/identidadevisual/marcaUC_submarcas/UC/UC_PR.png?hires" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="UC"></a>
     </div>
 
     <div class="w3-col m4">
@@ -1970,25 +1980,27 @@ hr {
 <!-- Container (Crowdfunding Section) -->
 <div class="w3-content w3-container w3-padding-48" id="crowdfund">
   <h3 class="w3-center"><em>S&Ecirc; PARTE DO CRESCIMENTO DO MAIOR PROJETO<br>DE FORMA&Ccedil;&Atilde;O ECON&Oacute;MICA EM PORTUGAL</em></h3>
-  <p class="w3-center">(devido a dificuldades técnicas a barra lateral não direciona para a página automaticamente,<br>sendo necessário ou usá-la para abrir um novo separador ou clickando <a target="_blank" href="https://ppl.pt/causas/olimpiadas-da-economia">aqui</a>)</p>
 
   <div class="w3-row-padding w3-center">
 
    <div class="w3-row w3-section">
 
     <div class="w3-col m8 w3-panel">
-      <div class="w3-large w3-margin-bottom w3-justify w3-text-black">
+      <div class="w3-medium w3-margin-bottom w3-justify w3-text-black">
         
-      	<p>Ap&oacute;s a consolida&ccedil;&atilde;o do projeto em Portugal Continental, ambicion&aacute;mos ir mais al&eacute;m na organiza&ccedil;&atilde;o das OE VI: trabalh&aacute;mos no alargamento &agrave;s Regi&otilde;es Aut&oacute;nomas de A&ccedil;ores e Madeira, assim como na participa&ccedil;&atilde;o portuguesa na final das International Economics Olympiad (IEO). Reuniremos, assim, em Coimbra mais de 50 jovens talentos na &aacute;rea da economia, que durante um fim-de-semana ter&atilde;o uma experi&ecirc;ncia inesquec&iacute;vel de aprendizagem.</p>
-		<p>No Ver&atilde;o de 2019, participaremos pela primeira vez na final das IEO, representando Portugal com uma comitiva composta pelos cinco vencedores das Olimp&iacute;adas da Economia, assim como dois l&iacute;deres de comitiva. A final decorrer&aacute; na R&uacute;ssia.</p>
-		<p>O crescimento do nosso projeto leva-nos a procurar unir a comunidade em torno da nossa causa. Acreditamos, juntos, poder dotar as Olimp&iacute;adas da Economia da sustentabilidade econ&oacute;mico-financeira necess&aacute;ria a garantir o crescente impacto que pretendemos ter no ensino nacional e nos jovens portugueses!</p>
+      	<p>Ap&oacute;s a consolida&ccedil;&atilde;o do projeto em <b>Portugal Continental</b>, ambicion&aacute;mos ir mais al&eacute;m na organiza&ccedil;&atilde;o da Edi&ccedil;&atilde;o VI das Olimp&iacute;adas da Economia: trabalh&aacute;mos no <b>alargamento &agrave;s Regi&otilde;es Aut&oacute;nomas de A&ccedil;ores e Madeira</b>, assim como na <b>participa&ccedil;&atilde;o portuguesa na final das International Economics Olympiad (IEO)</b>.</p>
+      	<p>Reuniremos, assim, em Coimbra mais de <b>50 jovens talentos na &aacute;rea da economia</b>, que durante um <b>fim-de-semana</b> ter&atilde;o uma experi&ecirc;ncia inesquec&iacute;vel de aprendizagem e que lhes criar&aacute; oportunidades &uacute;nicas.</p>
+		<p>No Ver&atilde;o de 2019, <b>participaremos pela primeira vez na final das IEO</b>, representando Portugal com uma comitiva composta pelos <b>cinco vencedores das Olimp&iacute;adas da Economia</b>, assim como dois l&iacute;deres de comitiva. A final decorrer&aacute; na <b>R&uacute;ssia</b>.</p>
+		<p>O crescimento do nosso projeto leva-nos a procurar <b>unir a comunidade em torno da nossa causa</b>. Acreditamos, juntos, poder dotar as Olimp&iacute;adas da Economia da sustentabilidade econ&oacute;mico-financeira necess&aacute;ria a <b>garantir o crescente impacto que pretendemos ter</b> no ensino nacional e nos jovens portugueses!</p>
+		<p>Os fundos angariados vão ser destinados a financiar a <b>comunica&ccedil;&atilde;o</b> das Olimp&iacute;adas da Economia <b>com as Escolas Secund&aacute;rias de Portugal</b>, a <b>organiza&ccedil;&atilde;o da Fase Final</b> e a <b>participa&ccedil;&atilde;o na Final Internacional</b>.</p>
+		<p>Junta-te a n&oacute;s e contribui para o <b>maior projeto de forma&ccedil;&atilde;o econ&oacute;mica</b> a n&iacute;vel nacional!</p>
 
       </div>
     </div>
 
     <div class="w3-col m4 w3-container w3-padding-32">
       <!-- Add Crowdfunding -->
-      <div class="w3-round-large w3-greyscale" style="width:100%;height:530px;"><iframe width="100%" height="550" src="https://ppl.pt/embed/567615" frameborder="0" scrolling="no" style="max-width: 400px;"></iframe></div>
+      <a target="_blank" href="https://ppl.pt/causas/olimpiadas-da-economia"><div class="w3-round-large w3-greyscale" target="_blank" href="facebook.com" style="width:100%;height:530px;"><iframe class="untouchable" width="100%" height="550" src="https://ppl.pt/embed/567615" frameborder="0" scrolling="no" style="max-width: 400px;"></iframe></div></a>
     </div>
 
    </div>
@@ -2088,9 +2100,9 @@ hr {
 <!-- Footer -->
 <footer class="w3-center w3-red w3-padding-32">
   <div class="w3-xlarge w3-section">
-    <a target="_blank" href="https://www.facebook.com/unedoismundos/"><i class="fab fa-facebook-square w3-hover-opacity"></i></a>&nbsp&nbsp&nbsp&nbsp&nbsp
-    <a target="_blank" href="https://www.instagram.com/olimpiadaseconomia/"><i class="fab fa-instagram w3-hover-opacity"></i></a>&nbsp&nbsp&nbsp&nbsp&nbsp
-    <a target="_blank" href="https://www.linkedin.com/company/unedoismundos/"><i class="fab fa-linkedin w3-hover-opacity"></i></a>&nbsp&nbsp&nbsp&nbsp&nbsp
+    <a target="_blank" href="https://www.facebook.com/unedoismundos/"><i class="fab fa-facebook-square w3-hover-opacity"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a target="_blank" href="https://www.instagram.com/olimpiadaseconomia/"><i class="fab fa-instagram w3-hover-opacity"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a target="_blank" href="https://www.linkedin.com/company/unedoismundos/"><i class="fab fa-linkedin w3-hover-opacity"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   </div>
 </footer>
  
@@ -2109,7 +2121,7 @@ function myMap()
   myCenter=new google.maps.LatLng(40.2147661, -8.4091276);
   var mapOptions= {
     center:myCenter,
-    zoom:12, scrollwheel: false, draggable: false,
+    zoom:12, scrollwheel: false, draggable: true,
     mapTypeId:google.maps.MapTypeId.ROADMAP
   };
   var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
