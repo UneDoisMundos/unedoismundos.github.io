@@ -1,0 +1,499 @@
+html {
+  scroll-behavior: smooth;
+}
+
+html, body {
+    height: 100%;
+    max-width: 100%;
+}
+
+#page {
+    min-height: 100%
+}
+
+.invisible {
+    color: rgb(68;68;68;100)
+}
+.text-shadow {
+    text-shadow: 2px 2px 10px #111111;
+}
+
+.text-table {
+    min-height: 100%;
+    min-width: 100%;
+}
+
+/* Button Custom */
+.btn-red {
+    color: #ffffff;
+    background-color: rgb(68,68,68,0);
+    border-color: #ffffff;
+}
+.btn-red:hover, .btn-red:focus, .btn-red:active, .btn-red.active, .open>.dropdown-toggle.btn-red {
+    color: #ffffff;
+    background-color: #f44336;
+    border-color: #f44336;
+}
+.btn-red-invert{
+    color: #ffffff;
+    background-color: #f44336;
+    border-color: #f44336;
+}
+.btn-red-invert:hover {
+    color: #f44336;
+    background-color: rgb(68,68,68,0);
+    border-color: #f44336;
+}
+.info-btn {
+    min-width: 100%;
+    color: #111;
+    background-color: #ffffff;
+    border: 0;
+}
+.info-btn:hover {
+    color: #ffffff;
+    background-color: #f44336;
+}
+/* Navbar Custom */
+.navbar-color {
+    background-color: rgb(68,68,68,0.9)!important;
+}
+.navbar-start-right {
+    margin-left: auto!important;;
+}
+
+/* Footer Custom */
+.footer-color {
+    background-color: rgb(68,68,68,1)!important;
+}
+.social {
+    margin: 0;
+    padding: 0;
+}
+.social ul {
+    margin: 0;
+    padding: 5px;
+}
+.social ul li {
+    margin: 5px;
+    list-style: none outside none;
+    display: inline-block;
+}
+.social i {
+    width: 40px;
+    height: 40px;
+    color: #FFF;
+    background-color: #909AA0;
+    font-size: 22px;
+    text-align:center;
+    padding-top: 10px;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+    -webkit-transition: all ease 0.3s;
+    -o-transition: all ease 0.3s;
+    -ms-transition: all ease 0.3s;
+}
+.social i:hover {
+    color: #ffffff;
+    text-decoration: none;
+    transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+    -webkit-transition: all ease 0.3s;
+    -o-transition: all ease 0.3s;
+    -ms-transition: all ease 0.3s;
+}
+.social .fa-facebook:hover {
+    background: #3b5998 !important;
+}
+.social .fa-instagram:hover {
+    background: #f34320 !important;
+}
+.social .fa-linkedin:hover {
+    background: #007bb6 !important;
+}
+.social .fa-arrow-down:hover {
+    background: #000000 !important;
+}
+
+/* Container Format */
+.container-body {
+    min-width: 100%;
+    max-width: 100%;
+}
+.container-round-corner {
+    width: 100%;
+    border-radius: 10px;
+    height: 100%;
+}
+
+/* Cover - Home Page */
+.cover-home {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    background-image: url(img/cover_background/home.png);
+    min-height: 100%;
+    max-width:: 100%;
+    box-sizing: inherit;
+    position: relative;
+    opacity: 0.75;
+}
+
+/* Cover - Info Page */
+.cover-info {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    background-image: url(img/cover_background/info.png);
+    min-height: 100%;
+    max-width:: 100%;
+    box-sizing: inherit;
+    position: relative;
+    opacity: 0.75;
+}
+
+/* Cover - News Page */
+.cover-news {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    background-image: url(img/cover_background/info.png);
+    min-height: 100%;
+    max-width:: 100%;
+    box-sizing: inherit;
+    position: relative;
+    opacity: 0.75;
+}
+
+/* Cover - About Us Page */
+.cover-about-us {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    background-image: url(img/cover_background/about_us.png);
+    min-height: 100%;
+    max-width:: 100%;
+    box-sizing: inherit;
+    position: relative;
+    opacity: 0.75;
+}
+
+/* Cover - Partners Page */
+.cover-partners {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    background-image: url(img/cover_background/partners.png);
+    min-height: 100%;
+    max-width:: 100%;
+    box-sizing: inherit;
+    position: relative;
+    opacity: 0.75;
+}
+
+/* Cover - Contact Page */
+.cover-contact {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    background-image: url(img/cover_background/contacts.png);
+    min-height: 100%;
+    max-width:: 100%;
+    box-sizing: inherit;
+    position: relative;
+    opacity: 0.75;
+}
+
+/* Cover - Crowdfunding Page */
+.cover-crowdfunding {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    background-image: url(img/cover_background/crowdfunding.png);
+    min-height: 100%;
+    max-width:: 100%;
+    box-sizing: inherit;
+    position: relative;
+    opacity: 0.75;
+}
+
+/* Cover - Contact Page */
+.cover-testimony {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    background-image: url(img/cover_background/testimonial.png);
+    min-height: 100%;
+    max-width:: 100%;
+    box-sizing: inherit;
+    position: relative;
+    opacity: 0.75;
+}
+
+
+/* Cover - Crowdfunding Page */
+.cover-tests {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    background-image: url(img/cover_background/tests.png);
+    min-height: 100%;
+    max-width:: 100%;
+    box-sizing: inherit;
+    position: relative;
+    opacity: 0.75;
+}
+
+/* Cover - Merchandising Page */
+.cover-merch {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    background-image: url(img/cover_background/merch.png);
+    min-height: 100%;
+    max-width:: 100%;
+    box-sizing: inherit;
+    position: relative;
+    opacity: 0.75;
+}
+
+/* No Event */
+.untouchable {
+	pointer-events: none;
+}
+
+.text-decoration-none {
+    text-decoration: none!important;
+}
+
+/* Calendar */
+.badge-red {
+    color: #ffffff;
+    background-color: #f44336;
+}
+
+/* Contactos */
+.contact-container {
+    background-color: #d3d3d3;
+}
+.map {
+    height: 100%; 
+    width: 100%;
+}
+
+/* Partner Logo Size */
+.partner-size-w {
+    max-width: inherit;
+}
+
+/* Side img - About Us */
+.side-about-us-team {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    background-image: url(https://i.imgur.com/Pg0R3W1.jpg);
+    min-width:: 100%!important;
+    box-sizing: inherit;
+    position: relative;
+}
+
+/* Testimonial Cards */
+.testimonial-box {
+    padding: 1em;
+    text-align: left;
+    margin-bottom: 1.1em;
+    float: left;
+}
+
+.bg-oe-red{
+    color: #ffffff;
+    background-color: #f44336;
+}
+
+/* Crowdfunding PPL */
+.crowdfunding-iframe {
+    min-height: 600px;
+    box-sizing: inherit;
+    position: relative;
+}
+
+/* Modal Tests */
+.modal_oe_i {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    background-image: url(img/tests_cover/modal_oe_i.jpg);
+}
+
+.modal_oe_iii {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    background-image: url(img/tests_cover/modal_oe_iii.jpg);
+}
+
+.modal_oe_iv {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    background-image: url(img/tests_cover/modal_oe_iv.jpg);
+}
+
+.modal_oe_v {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    background-image: url(img/tests_cover/modal_oe_v.png);
+}
+
+.modal_oe_vi {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    background-image: url(img/cover_background/home.png);
+}
+
+/* Merchandising */
+.merch-box {
+    background:#000;
+    position:relative;
+}
+
+.merch-box:after {
+    background:rgba(0,0,0,.7);
+    position:absolute;
+    top:0;
+    left:-30%;
+    bottom:0;
+    right:70%;
+    transform:skew(20deg) translateX(-75%);
+}
+
+.merch-box:hover:after {
+    transform:skew(20deg) translateX(0)
+}
+
+.merch-box img {
+    width:100%;
+    height:auto;
+}
+
+.merch-box:hover img {
+    opacity:.5
+}
+
+.merch-box .merch-box-content {
+    padding:20px;
+    text-align:right;
+    position:absolute;
+    top:0;
+    right:0;
+    z-index:1;
+    height: 100%;
+}
+
+.merch-box-content {
+    display: flex;
+}
+
+.merch-box .icon {
+    padding:0;
+    list-style:none;
+}
+
+.merch-box .icon li a {
+    text-align:center;
+}
+
+.merch-box .title {
+    font-size:20px;
+    font-weight:900;
+    color:#fff;
+    margin:0 0 10px;
+    transform:scale(0);
+}
+
+.merch-box:hover .title {
+    transform:scale(1);
+}
+
+.merch-box .icon li,.merch-box .post {
+    opacity:0;
+    transform:translateX(40px);
+    transition:all .35s ease 0s;
+}
+
+.merch-box .post {
+    display:block;
+    font-size:14px;
+    color:#fff;
+    margin-bottom:5px;
+}
+
+.merch-box .icon {
+    display:inline-block;margin:0;
+}
+
+.merch-box:hover .icon li,.merch-box:hover .post {
+    opacity:1;transform:translateX(0)}
+
+.merch-box:hover .icon li:first-child {
+    transition-delay:.1s;
+}
+
+.merch-box:hover .icon li:nth-child(2) {
+    transition-delay:.2s;
+}
+
+.merch-box .icon li a {
+    display:block;
+    width:35px;
+    height:35px;
+    line-height:35px;
+    background:#fff;
+    font-size:18px;
+    color:#f44336;
+    margin-bottom:5px;
+    transition:all .35s ease;
+}
+
+.merch-box .icon li a:hover {
+    background:#f44336;
+    color:#fff;
+}
+
+@media only screen and (max-width:990px) {
+    .merch-box {
+        margin-bottom:30px;
+    }
+}
+
+.modal-img-max {
+    min-width: 100%;
+}
+
+/* About Us */
+.about-color {
+    background-color: rgb(62, 77, 81, 0.8);
+}
+
+
